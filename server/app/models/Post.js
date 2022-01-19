@@ -8,6 +8,12 @@ export default mongoose.model(
     content: {
       type: String,
     },
-    // date
+    tags: {
+      type: [String],
+    },
+    date: {
+      type: Date,
+      default: Date.now,
+    },
   })
 );
