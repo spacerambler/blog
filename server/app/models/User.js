@@ -1,9 +1,10 @@
 import mongoose from "mongoose";
 
 const userSchema = new mongoose.Schema({
-  name: {
+  username: {
     type: String,
     unique: true,
+    required: true,
   },
   email: {
     type: String,
@@ -15,4 +16,10 @@ const userSchema = new mongoose.Schema({
     required: true,
     minlength: 6,
   },
+  profilePic: {
+    type: String,
+    default: "",
+  },
 });
+
+module.exports = mongoose.model("User", userSchema);
