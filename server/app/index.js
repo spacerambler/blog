@@ -1,7 +1,7 @@
 import express from "express";
 import mongoose from "mongoose";
 import config from "./config.js";
-import authRoute from "./routes/auth.js";
+// import authRoute from "./routes/auth.js";
 
 const { port } = config;
 const { db } = config;
@@ -23,6 +23,6 @@ app.use(
   express.static("public")
 );
 
-app.use("/api/auth", authRoute);
+// app.use("/api/auth", authRoute);
 
 app.listen(port, () => console.log("server running"));
